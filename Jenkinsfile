@@ -32,11 +32,11 @@ pipeline{
                     image 'cdrx/pyinstaller-linux:python2'
                 }
             }
-            step {
+            steps {
                 sh 'pyinstaller --onefile sources/add2vals.py'
             }
-            post{
-                success{
+            post {
+                success {
                     archiveArtifacts 'dist/add2vals'
                 }
             }
